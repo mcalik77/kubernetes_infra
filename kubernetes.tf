@@ -29,7 +29,6 @@ locals = {
 }
 locals.tf
 
-
 resource "aws_autoscaling_attachment" "bastions-kubernetesmcalik-com" {
   elb                    = "${aws_elb.bastion-kubernetesmcalik-com.id}"
   autoscaling_group_name = "${aws_autoscaling_group.bastions-kubernetesmcalik-com.id}"
