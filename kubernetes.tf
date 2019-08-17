@@ -27,7 +27,7 @@ locals = {
   vpc_cidr_block                    = "${aws_vpc.kubernetesmcalik-com.cidr_block}"
   vpc_id                            = "${aws_vpc.kubernetesmcalik-com.id}"
 }
-
+locals.tf
 output "bastion_autoscaling_group_ids" {
   value = ["${aws_autoscaling_group.bastions-kubernetesmcalik-com.id}"]
 }
