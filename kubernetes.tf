@@ -104,42 +104,6 @@ output "route_table_public_id" {
   value = "${aws_route_table.kubernetesmcalik-com.id}"
 }
 
-output "subnet_us-west-2a_id" {
-  value = "${aws_subnet.us-west-2a-kubernetesmcalik-com.id}"
-}
-
-output "subnet_us-west-2b_id" {
-  value = "${aws_subnet.us-west-2b-kubernetesmcalik-com.id}"
-}
-
-output "subnet_us-west-2c_id" {
-  value = "${aws_subnet.us-west-2c-kubernetesmcalik-com.id}"
-}
-
-output "subnet_utility-us-west-2a_id" {
-  value = "${aws_subnet.utility-us-west-2a-kubernetesmcalik-com.id}"
-}
-
-output "subnet_utility-us-west-2b_id" {
-  value = "${aws_subnet.utility-us-west-2b-kubernetesmcalik-com.id}"
-}
-
-output "subnet_utility-us-west-2c_id" {
-  value = "${aws_subnet.utility-us-west-2c-kubernetesmcalik-com.id}"
-}
-
-output "vpc_cidr_block" {
-  value = "${aws_vpc.kubernetesmcalik-com.cidr_block}"
-}
-
-output "vpc_id" {
-  value = "${aws_vpc.kubernetesmcalik-com.id}"
-}
-
-provider "aws" {
-  region = "us-west-2"
-}
-
 resource "aws_autoscaling_attachment" "bastions-kubernetesmcalik-com" {
   elb                    = "${aws_elb.bastion-kubernetesmcalik-com.id}"
   autoscaling_group_name = "${aws_autoscaling_group.bastions-kubernetesmcalik-com.id}"
